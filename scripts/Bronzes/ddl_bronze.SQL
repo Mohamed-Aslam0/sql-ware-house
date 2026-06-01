@@ -1,1 +1,48 @@
+-- =====================================================
+-- BRONZE LAYER - DDL (Data Definition Language) Script
+-- =====================================================
+-- Purpose:
+--   This script contains Data Definition Language (DDL) statements for creating 
+--   and managing tables in the Bronze layer of the data warehouse.
+--
+-- Layer Definition:
+--   The Bronze layer is the raw data ingestion layer that stores data as-is from 
+--   source systems with minimal transformation. It serves as:
+--   - A landing zone for raw data from various sources (APIs, databases, files, etc.)
+--   - A historical record of data in its original form
+--   - A foundation for data quality checks and transformations
+--
+-- Key Characteristics:
+--   - Tables follow a naming convention: bronze_<source_system>_<entity_name>
+--   - Includes metadata columns: load_timestamp, source_filename, record_hash (for change detection)
+--   - All columns typically stored as VARCHAR/STRING to preserve raw data integrity
+--   - Partition strategy: Typically by load date or ingestion date for performance
+--
+-- Typical Workflow:
+--   1. Raw data lands in Bronze tables
+--   2. Data quality validations are performed
+--   3. Validated data is transformed and moved to Silver layer
+--   4. Silver layer data is aggregated/refined for the Gold layer
+--
+-- Best Practices:
+--   - Keep table structures simple; avoid complex transformations here
+--   - Add load audit columns for tracking data lineage
+--   - Document data source and extraction method
+--   - Implement partitioning for large tables to optimize query performance
+--   - Consider compression settings for cost optimization
+--
+-- Add your Bronze layer table definitions below:
+-- =====================================================
+
+-- Example template (uncomment and modify as needed):
+-- CREATE TABLE IF NOT EXISTS bronze_<source>_<entity> (
+--     id                  BIGINT,
+--     raw_data            STRING,          -- Or individual columns as VARCHAR
+--     load_timestamp      TIMESTAMP,       -- When the record was loaded
+--     source_filename     STRING,          -- Track data source file
+--     record_hash         STRING,          -- For change detection
+--     ingestion_date      DATE             -- For partitioning
+-- )
+-- PARTITIONED BY (ingestion_date)
+-- COMMENT 'Bronze layer table for <source> <entity> data';
 

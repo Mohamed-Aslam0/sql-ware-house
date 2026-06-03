@@ -36,6 +36,7 @@ FROM
 			) AS FLAG_LAST
 		FROM
 			BRONZE.CRM_CUST_INFO
+            WHERE cst_id IS NOT NULL
 	) T
 WHERE
 	FLAG_LAST = 1

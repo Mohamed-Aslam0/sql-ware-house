@@ -1,5 +1,4 @@
- select * from silver.crm_prd_info;
-
+ -- select * from silver.crm_prd_info;
 INSERT INTO
 	SILVER.CRM_PRD_INFO (
 		PRD_ID,
@@ -13,7 +12,6 @@ INSERT INTO
 	)
 SELECT
 	PRD_ID,
-	prd_key,
 	REPLACE(SUBSTRING(PRD_KEY FROM 1 FOR 5),'-','_') AS cat_id,
 	substring(prd_key from 7 ) as prd_key,
 	PRD_NM,
@@ -25,12 +23,8 @@ SELECT
 	WHEN 'T' THEN 'Touring'
 	ELSE 'N/A'
 	END AS PRD_LINE,
-				CAST(prd_start_dt AS DATE) AS prd_start_dt,
-			CAST(
-				LEAD(prd_start_dt) OVER (PARTITION BY prd_key ORDER BY prd_start_dt) - 1 
-				AS DATE
-			) AS prd_end_dt -- Calculate end date as one day before the next start date
-
+	CAST(prd_start_dt AS DATE) AS PRD_START_DT,
+    CAST(LEAD(prd_start_dt) OVER (PARTITION BY prd_key ORDER BY prd_start_dt) - INTERVAL '1 day' AS DATE ) AS PRD_END_DT
 FROM
 	BRONZE.CRM_PRD_INFO;
 

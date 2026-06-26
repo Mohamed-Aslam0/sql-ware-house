@@ -52,4 +52,5 @@ Hi, I'm **Mohamed Aslam** — a final-year B.E. Computer Science student at JCT 
 This project is part of my journey toward a data engineering internship, where I'm sharpening my skills in ETL pipelines, medallion architecture, and star schema design.
 
 -  GitHub: [Mohamed-Aslam0](https://github.com/Mohamed-Aslam0)
+-  LinkedIn: [Mohamed Aslam](https://www.linkedin.com/in/mohamed-aslam24/)
 -  Open to data engineering internship opportunities

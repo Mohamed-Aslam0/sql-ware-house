@@ -71,4 +71,4 @@ FROM
 	left join gold.dim_product PR
 	on sl.sls_prd_key= pr.product_number
     left join gold.dim_customers CU
-	on sl.sls_cust_id = cu.customer_id
+	on sl.sls_cust_id = cu.customer_id;

@@ -33,9 +33,9 @@ sql-ware-house/
 4. Explore the Gold layer star schema for analytics
    
 ## Learning Goals
--Strengthen SQL fundamentals
--Practice real-world data engineering workflows
--Build recruiter-ready portfolio projects
+- Strengthen SQL fundamentals
+- Practice real-world data engineering workflows
+- Build recruiter-ready portfolio projects
 
 ##  Credits
 

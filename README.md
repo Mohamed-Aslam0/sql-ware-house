@@ -39,7 +39,7 @@ sql-ware-house/
 
 ##  Credits
 
-This project follows the data warehouse methodology taught by **Data With Baraa**  @github.com/DataWithBaraa. Big thanks for the clear, structured approach to building a real-world data warehouse from scratch.
+This project follows the data warehouse methodology taught by [DataWithBaraa](https://github.com/DataWithBaraa). Big thanks for the clear, structured approach to building a real-world data warehouse from scratch.
 
 ## 📄 License
 

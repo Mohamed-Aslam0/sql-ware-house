@@ -44,3 +44,12 @@ This project follows the data warehouse methodology taught by [DataWithBaraa](ht
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+## 👤 About Me
+
+Hi, I'm **Mohamed Aslam** — a final-year B.E. Computer Science student at JCT College of Engineering and Technology, actively learning data engineering and building hands-on projects around SQL, PostgreSQL, and data warehousing.
+
+This project is part of my journey toward a data engineering internship, where I'm sharpening my skills in ETL pipelines, medallion architecture, and star schema design.
+
+-  GitHub: [Mohamed-Aslam0](https://github.com/Mohamed-Aslam0)
+-  Open to data engineering internship opportunities

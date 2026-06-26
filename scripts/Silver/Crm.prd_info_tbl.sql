@@ -12,8 +12,8 @@ INSERT INTO
 	)
 SELECT
 	PRD_ID,
-	REPLACE(SUBSTRING(PRD_KEY FROM 1 FOR 5),'-','_') AS cat_id,
 	substring(prd_key from 7 ) as prd_key,
+	REPLACE(SUBSTRING(PRD_KEY FROM 1 FOR 5),'-','_') AS cat_id,
 	PRD_NM,
 	COALESCE (PRD_COST, 0) AS PRD_COST,
 	CASE  UPPER(TRIM(PRD_LINE))
